@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <title>Okla</title>
+</head>
+
+<body>
+    <!-- Home -->
+    <header>
+        <h1><a href ="index.html">OKLA</a></h1>
+    </header>
+     <!-- Welcome -->
+</body>    
+    <div class="home div" id="startGame">
+        <img src="asset/image/vbg_tp7umm.png"
+            alt="quiz-image"><br>                    
+        <p><span>Okla</span>
+            <span>is</span>
+            <span>a</span>
+            <span>quiz</span>
+            <span>app</span>
+            <span>created</span>
+            <span>to</span>
+            <span>test</span>
+            <span>your</span>
+            <span>knowledge</span>
+            <span>on</span>
+            <span>the</span>
+            <span>UCD</span>
+            <span>March</span>
+            <span>2023</span>
+            <span>Cohort.</span>
+            <span>Click on the arrow to select your category!</span>
+        </p>
+        <a class="next" onclick="controlPage(1)">&#10095;</a>
+    </div>
+    <div class="home div">
+        <!-- <p><span>On </span>
+            <span>your</span>
+            <span>Mark...</span>
+            <span>Set</span>
+            <span>Go!</span>
+        </p> -->
+        <p class="user-name"></p>
+        <img src="asset/image/group-young-people-jumping_23-2148293032-removebg-preview.png"
+        alt="quiz-image2"><br>
+
+    <div class ="rules">
+        <div class="rules-title"> <span><b>Rules of the Quiz</b></span></div>
+        <div class="rules-list">
+            <div class = rule>1.You will have <span>30 seconds</span> to complete the questions in each category</div>
+            <div class = rule>2.You can only select 1 answer at a time </div>
+            <div class = rule>3.You can't exit the quiz while you are in the game</div>
+        </div>
+    </div><br><br>
+
+    <div class = "dropdown"> 
+        <input type ="text" class="text_content" readonly placeholder="Select category to begin">
+        <div class = "option"> 
+            <div onmouseover="show('About the Students')" onclick="startQuiz('Category 1')" class ="option-text1" >About the Students</div>
+            <div onmouseover="show('About the Tutor')" onclick="startQuiz('Category 2')" class ="option-text2"  >About the Tutor</div>
+        </div>
+    </div>
+    <a class="prev" onclick="controlPage(-1)">&#10094;</a>
+    </div>  
+  
+  <!-- javascript --> 
+<script src="asset/js/script.js"></script>
+ 
+</body>

@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin-top: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(34, 34, 58);
+    color: #ffff;
+}
+
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* position quiz at the center.  */
+.quiz-container {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+
+
+/* Main Quiz */
+
+.quiz-heading {
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.main {
+    margin: 0;
+    min-width: 80%;
+    padding: 40px ;
+}
+
+.stats-board {
+    display: flex;
+    justify-content: space-around;
+}
+
+.quiz-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin-bottom: 0.5rem;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    border: 2px solid rgb(226, 226, 226);
+    border-radius: 0.5rem;
+}
+
+.next-btn, .retry-btn  {
+    display: block;
+    width: 200px;
+    margin: 5px auto;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+    background: #FF7A72;
+    cursor: pointer;
+}
+
+
+.option:hover {
+    cursor: pointer;
+    background: #fff;
+    /* box-shadow: 0.1rem 0 0 0 #0071bd; */
+    transform: translateY(-0.15rem);
+    transition: transform 200ms;
+    color: #242423;
+}
+
+.quiz-options {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.option:nth-child(odd) {
+    cursor: pointer;
+    margin-right: 0.25rem;
+}
+
+.option:nth-child(even) {
+    cursor: pointer;
+    margin-left: 0.25rem;
+}
+
+.hide {
+    display: none;
+}
+
+.result {
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+    font-size: 1.5em;
+}
+
+.result img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: 10px;
+
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+
+/* styling for correct or wrong answer */
+
+.option-correct {
+    background-color: rgb(108, 206, 108);
+    color: white;
+ }
+ 
+ .option-wrong {
+    background-color: red;
+    color: white;
+    animation: shake 0.5s;
+    animation-iteration-count: 0.3s;
+ }
+ 
+ .option-correct:hover {
+     background: rgba(24, 175, 24, 0.863);
+     box-shadow: 0.1rem 0 0 0 #0071bd;
+    color: white;
+ }
+ 
+ .option-wrong:hover {
+     background: rgba(175, 42, 24, 0.863);
+     box-shadow: 0.1rem 0 0 0 #0071bd;
+    color: white;
+ }
+
+ /* animation for wrong answer */
+ @keyframes shake{
+    0% {transform: translate(1px, 1px) rotate(0deg);}
+    10% {transform: translate(-1px, -2px) rotate(-1deg);}
+    20% {transform: translate(-3px, 0px) rotate(1deg);}
+    30% {transform: translate(3px, 2px) rotate(0deg);}
+    40% {transform: translate(1px, -1px) rotate(1deg);}
+    50% {transform: translate(-1px, 2px) rotate(-1deg);}
+    60% {transform: translate(-3px, 1px) rotate(0deg);}
+    70% {transform: translate(3px, 1px) rotate(-1deg);}
+    80% {transform: translate(-1px, -1px) rotate(1deg);}
+    90% {transform: translate(1px, 2px) rotate(0deg);}
+    100% {transform: translate(1px, -2px) rotate(-1deg);}
+}
+
+/* Media Queries */
+
+/* screens above 871px */
+@media (min-width: 871px) {
+    .container {
+        height: 100vh;
+    }
+
+    .body {
+        min-width: 500px;
+    }
+}
+
+/* screens below 768px */
+@media (max-width: 870px){
+
+    .main {
+       width: 88%;
+    }
+ 
+    .header {
+       padding: 1.5rem 1rem;
+       margin-top: 0;
+       margin-bottom: 1rem;
+    }
+    
+    .quiz-container {
+       width: 85%;
+       margin: 0 auto;
+    }
+
+    .quiz-options {
+        display: grid;
+        grid-template-columns: 100%;
+     }
+
+    .option:nth-child(odd) {
+        margin-right: 0;
+        }
+     
+    .option:nth-child(even) {
+        margin-left: 0;
+        }
+
+}
+
+/*form*/
+
+form{
+    max-width: 90%;
+    display: inline-block;
+    width: 500px;
+    border-radius: 10px;
+    cursor:pointer;
+    border-radius: 10px;
+    padding:12px 20px;
+    font-size: 16px;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    height:85px;
+}
+
+form .email_input-box{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    background: white;
+    position: relative;
+    
+}
+
+.email_input-box input{
+    height:100%;
+    outline: none;
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    padding: 0 45px;
+    color: #242423;
+    transition: all 0.3s ease;    
+}
+
+.email_input-box input.emailscoreTxtbx{
+    width: 75%;
+    margin-right: 15px ;
+    background: white; 
+}
+
+
+.email_input-box input.emailscoreTxtbx:focus{
+    border-color: grey;
+}
+
+form.error input.emailscoreTxtbx{
+    border-color: red;
+}
+
+form.valid input.emailscoreTxtbx{
+    border-color: green;
+}
+
+.email_input-box input.emailscoreBtn{
+   min-width: 30%;
+   padding: 0;
+   color: white;
+   background: #FF7A72;
+   border: none;
+   cursor: pointer;
+   text-align: center;
+   white-space: normal;
+   
+}
+
+
+.email_input-box i{
+    position: absolute;
+    transform: translateY(-50%);
+    font-size: 15px;
+}
+
+.email_input-box i.email-icon{
+    color: lightgrey;
+    left: 20px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+form.valid i.email-icon{
+    color: green;
+}
+
+.email_input-box input.emailscoreTxtbx:focus ~ i.email-icon{
+    color: grey;
+}
+
+.email_input-box .error-icon,
+.email_input-box .check-icon{
+    color: red;
+    background-color: transparent;
+    left:calc(75% - 60px);
+    display: none;
+}
+
+form.error .error-icon{
+    display: block;
+}
+
+.email_input-box .check-icon{
+    color:green;  
+}
+
+
+form.valid .check-icon{
+    display: block;
+    
+}
+
+form .text{
+    color:red;
+    background: white;
+    position: absolute;
+    font-size: 14px;
+    font-weight: 500px;
+}
+
+form.valid .text{
+    color:lightgreen;
+}

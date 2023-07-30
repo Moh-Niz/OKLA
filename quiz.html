@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="asset/css/quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Okla</title>
+</head>
+
+<body>
+    <div class=" quiz-container">
+
+        <div class="main">
+            <div class="quiz-heading">
+                <h2>OKLA</h2>
+
+            </div>
+
+            <!-- Scoreboard -->
+            <div class="score-board stats-board">
+
+                <h3 class="mini-card">Question: <span id="question-counter"></span> / 4</h3>
+                <h3 class="mini-card">Score: <span id="score"></span> / 40</h3>
+                <h3 class="mini-card">Time:  <span id="Time"></span></h3>
+            </div>
+
+            <!-- Quiz Questions -->
+            <div class="quiz-wrapper">
+                <div class="header card">
+                    <p id="question">
+                    </p>
+                </div>
+
+                <div class="quiz-options  answerBtn">
+                    <div class="card option" num="1">
+                        <p></p>
+                    </div>
+                    <div class="card option" num="2">
+                        <p></p>
+                    </div>
+                    <div class="card option" num="3">
+                        <p></p>
+                    </div>
+                    <div class="card option" num="4">
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button class="next-btn" type="submit">Next</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="asset/js/quiz.js"></script>
+</body>

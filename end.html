@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="asset/css/quiz.css">
+    <title>Okla</title>
+</head>
+<body>
+    <div class="container">
+        <div class="try-again result">
+            <h3 id="scoreReview"></h3>
+            <img src="asset/image/trophy_pjvty6.svg" alt=" emoji" class="first hide">
+            <img src="asset/image/cool_dceuis.svg" alt="emoji" class="second hide">
+            <img src="asset/image/shocked_2_eme4hm.svg" alt="emoji" class="third hide">
+            <img src="asset/image/dead_a1satm.svg"alt="emoji" class="last hide">
+            <h5 class="finalMessage">Start Again.</h5>
+            <button id="retryBtn" class="retry-btn">Try Again</button><br>
+            <form action = "index.html">
+                <div class="email_input-box">
+                    <input class = "emailscoreTxtbx" type="text" placeholder="enter a valid email">
+                    <i class="bx bx-envelope bx-tada email-icon"></i>
+                    <i class="bx bx-alarm-exclamation bx-tada error-icon" ></i>
+                    <i class='bx bx-check bx-tada check-icon ' ></i>
+                    <input id= 'emailscoreBtn' class = "emailscoreBtn" type ="Submit" value = "Email Score">
+                </div>
+                <p class ="text"></p>
+            </form>  
+        </div>
+    </div>
+    <script src="asset/js/end.js"></script>
+</body>
+</html>
