@@ -8,13 +8,13 @@ I hosted the app with Github and it can be accessed through this link:
 
 # Look and Feel
 ## Section 1
-![section_1](/asset/image-1.png)
+![section_1](asset/image/image-1.png)
 ## Section 2
-![section_2](asset/image-2.png)
+![section_2](asset/image/image-2.png)
 ## Quiz Page
-![Quiz_Page](asset/image-3.png)
+![Quiz_Page](asset/image/image-3.png)
 ## Score Page
-![Score_Page](asset/image-4.png)
+![Score_Page](asset/image/image-4.png)
 
 # How to use
 Access the app through the link above and enjoy quizzing!
